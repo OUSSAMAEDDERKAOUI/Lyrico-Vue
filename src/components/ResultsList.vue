@@ -28,3 +28,16 @@
   </div>
 </template>
 
+<script setup>
+import AudioPlayer from './AudioPlayer.vue';
+
+defineProps({
+  results: {
+    type: Array,
+    required: true
+  }
+});
+
+defineEmits(['select-song']);
+</script>
+
