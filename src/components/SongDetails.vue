@@ -45,3 +45,30 @@
   </div>
 </template>
 
+<script setup>
+import AudioPlayer from './AudioPlayer.vue';
+
+const props = defineProps({
+  song: {
+    type: Object,
+    required: true
+  },
+  lyrics: {
+    type: String,
+    default: ''
+  },
+  isLoadingLyrics: {
+    type: Boolean,
+    default: false
+  }
+});
+
+defineEmits(['close']);
+
+function formatDuration(seconds) {
+  const minutes = Math.floor(seconds / 60);
+  const remainingSeconds = seconds % 60;
+  return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+}
+</script>
+
