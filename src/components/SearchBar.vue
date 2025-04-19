@@ -40,3 +40,55 @@ function handleSearch() {
 }
 </script>
 
+<style scoped>
+.search-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.search-box {
+  display: flex;
+}
+
+input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 5px 0 0 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #42b983;
+}
+
+.search-button {
+  background-color: #42b983;
+  color: white;
+  border: none;
+  padding: 0 20px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.search-button:hover {
+  background-color: #3aa876;
+}
+
+.search-button:disabled {
+  background-color: #9ed0bc;
+  cursor: not-allowed;
+}
+
+.search-tips {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #777;
+  text-align: left;
+}
+</style>
