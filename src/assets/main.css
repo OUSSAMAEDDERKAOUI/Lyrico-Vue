@@ -1,35 +1,45 @@
-@import './base.css';
+/* Reset et styles de base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-#app {
-  max-width: 1280px;
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Variables de couleur globales */
+:root {
+  --primary-color: #42b983;
+  --primary-dark: #3aa876;
+  --text-color: #333;
+  --text-light: #777;
+  --border-color: #eee;
+  --bg-light: #f9f9f9;
+  --bg-white: #fff;
+  --error-color: #e53935;
+}
+
+/* Conteneur global */
+.container {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+  padding: 0 20px;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+/* Styles d'utilité */
+.text-center {
+  text-align: center;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+.mt-20 {
+  margin-top: 20px;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+.mb-20 {
+  margin-bottom: 20px;
 }
