@@ -88,3 +88,51 @@ onUnmounted(() => {
 });
 </script>
 
+<style scoped>
+.audio-player {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.play-button {
+  background-color: #42b983;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.progress-container {
+  flex: 1;
+  height: 6px;
+  background-color: #eee;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #42b983;
+  width: 0;
+  transition: width 0.1s linear;
+}
+
+.time-display {
+  font-size: 12px;
+  color: #777;
+  min-width: 80px;
+  text-align: right;
+}
+</style>
